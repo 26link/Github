@@ -1,0 +1,1 @@
+{"C:\\26link\\26link_html\\gulpfile.js":{"sha1":"bae5ae535d07dffa5534439e08f3c6c2b2e5d272","tasks":{"browser-sync":{"name":"browser-sync","dependencies":"styles scripts"},"styles":{"name":"styles","dependencies":""},"scripts":{"name":"scripts","dependencies":""},"watch":{"name":"watch","dependencies":""},"default":{"name":"default","dependencies":"browser-sync watch"}}}}

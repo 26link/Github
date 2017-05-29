@@ -1,0 +1,323 @@
+@import bourbon
+@import fonts.sass
+@import vars.sass
+
+body
+	font-size: 18px
+	min-width: 320px
+	position: relative
+	line-height: 1.6
+	font-family: "RobotoCondensedLight", sans-serif
+	overflow-x: hidden
+	color: #5c6873
+
+h1, h2, h3, h4, h5
+	text-transform: uppercase
+	font-family: "RobotoCondensedBold", sans-serif
+
+h2
+	font-size: em(36px)
+
+h3
+	font-size: em(20px)
+
+h4
+	font-size: em(20px)
+
+a
+	outline: none !important
+
+.text-center
+	text-align: center
+.text-right
+	text-align: right
+.text-left
+	text-align: left
+
+.main-head
+	background-image: url("/img/bg1.jpg")
+	min-height: 100vh
+	background-size: cover
+	background-position: bottom center
+	position: relative
+	&:before
+		content: ""
+		top: 0
+		right: 0
+		width: 100%
+		height: 100%
+		position: absolute
+		background-image: url("/img/black-dots.png")
+
+
+.mnu-line
+	padding: 12px 0 12px
+	box-shadow: 2px 2px 3px #666
+.default
+	background-color: rgba(92, 104, 115, 0.9)
+	position: absolute
+	width: 100%
+	z-index: 11
+
+.fixed
+	position: fixed
+	width: 100%
+	top: 0px
+	right: 0
+	z-index: 10
+	padding: 5px 0
+	background-color: rgba(130, 123, 117, 0.2)
+	+mt(.3s)
+	&:hover
+		background-color: rgba(92, 104, 115, 0.9)
+
+
+.logo
+	display: block
+	width: 210px
+	padding-top: 5px
+	img
+		width: 100%
+
+nav
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+	li
+		display: inline-block
+
+.main-mnu
+	padding-left: 70px
+	text-align: center
+	font-family: "RobotoCondensedBold", sans-serif
+	text-transform: uppercase
+	font-size: em(12px)
+	> ul
+		> li
+			> a
+				display: block
+				padding: 18px 15px
+				color: #fff
+				+mt(.5s)
+				&:hover
+					text-decoration: underline
+				
+					
+
+.phone-wrap
+	text-align: right
+
+.phone
+	font-family: "RobotoCondensedBold", sans-serif
+	font-size: em(16px)
+	color: #fff
+	.fa
+		padding-right: 10px
+		position: relative
+		top: 2px
+	a
+		color: #fff
+		+mt(.3s)
+		&:hover
+			color: lighten($main-color, 30%)
+			text-decoration: none
+
+
+.button
+	display: inline-block
+	background-color: $accent-color
+	border-radius: 5px
+	color: #fff
+	text-transform: uppercase
+	text-align: center
+	+mt(.6s)
+	&:hover
+		background-color: darken($accent-color, 20%)
+		color: #fff
+		text-decoration: none
+	&:active
+		background-color: lighten($accent-color, 5%)
+		color: #fff
+	&:focus
+		color: #fff
+.callback
+	padding: 2px 5px
+	width: 150px
+	font-size: em(12px)
+
+	//Toggle Mnu
+.toggle-mnu 
+	display: block
+	width: 28px
+	height: 28px
+	margin-top: 14px
+
+
+	span:after, span:before 
+		content: ""
+		position: absolute
+		left: 0
+		top: 9px
+		
+	span:after
+		top: 18px
+
+	span 
+		position: relative
+		display: block
+
+	span, span:after, span:before
+		width: 100%
+		height: 3px
+		background-color: #fff
+		transition: all 0.3s
+		backface-visibility: hidden
+		border-radius: 2px
+		
+
+
+	&.on span 
+		background-color: transparent
+
+	&.on span:before 
+		transform: rotate(45deg) translate(-1px, 0px)
+
+	&.on span:after 
+		transform: rotate(-45deg) translate(6px, -7px)
+
+.toggle-mnu
+	position: absolute
+	top: 0
+	right: 15px
+
+.hidden-mnu
+	background-color: $bg-color
+	display: none
+	position: relative
+	top: 20px
+	li
+		display: block
+			
+	> ul
+		padding: 20px 0
+		> li
+			> a
+				&:hover
+					color: #fff
+					background-color: $accent-color
+					text-decoration: none
+
+.title
+	text-align: center
+	padding: 20px 0
+	display: inline-block
+	h2
+		letter-spacing: 1px
+		max-width: 420px
+		position: relative
+		width: 100%
+.title h2
+	padding-bottom: 10px
+	&:after
+		content: ""
+		position: absolute
+		bottom: -2px
+		left: 50%
+		margin-left: -15%
+		width: 30%
+		height: 2px
+		background: $accent-color
+
+//Slider
+.slider
+	padding: 30px
+	text-align: center
+	color: #fff
+	width: 100%
+	background-size: cover
+	span
+		font-size: em(24px)
+	p
+		margin: 0px
+
+	.button
+		padding: 5px 70px
+		font-weight: 600
+		margin: 30px
+
+	.clock-wrap
+		width: 100%
+		text-align: center 
+		.your-clock
+			display: inline-block
+			width: auto
+	.flip-clock-wrapper 
+		.inn
+			background-color: white
+			color: $accent-color
+		.flip-clock-label
+			top: 100px
+			color: #fff
+			font-size: em(12px)
+		.flip-clock-dot
+			background-color: lighten($main-color, 80%)
+			height: 7px
+			width: 7px
+		.flip-clock-before
+			background-color: darken($bg-color, 5%)
+			
+
+.slider-slogan
+	font-size: em(32px)
+	padding-top: 100px
+	color: #fff
+	text-shadow: 2px 2px 3px $bg-color
+	h1
+		margin-bottom: 0
+	h2
+		font-size: em(16px)
+		margin: 0 0 50px 0
+	
+
+.discount
+	background-color: rgba(92, 104, 115, 0.4)
+	position: relative
+	.tizer-triange
+		position: absolute
+		top: 0
+		right: 0
+		@include triangle(80px, $accent-color, up-right)
+		span
+			font-family: "RobotoCondensedBold", sans-serif
+			font-size: 38px
+			position: absolute
+			top: -86px
+			right: 13px
+	h2
+		font-size: em(28px)
+		margin-bottom: 0px
+		span
+		font-size: em(34px)
+	
+.red
+	color: $accent-color
+
+.table
+	display: table
+	width: 100%
+	height: 100%
+	table-layout: fixed
+	.tr
+		display: table-row
+	.td
+		display: table-cell
+		vertical-align: middle
+
+
+
+
+
+
+.hidden
+	display: none

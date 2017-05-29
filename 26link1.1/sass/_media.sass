@@ -1,0 +1,134 @@
+@import bourbon
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+	.logo
+		max-width: 180px
+		padding-top: 5px
+	.main-mnu
+		padding-left: 0px
+		ul
+			li
+				a
+					padding: 18px 10px
+	
+	.phone-wrap
+		padding-right: 50px
+	.phone
+		font-size: 14px
+	.callback
+		padding: 1px 3px
+	.services
+		.item
+			padding: 5px
+			margin: 0px
+			.button
+				right: 80px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+	.slider-slogan
+		h2
+			font-size: em(24px)
+	.zayvka-form
+		margin: 30px 2px
+		padding: 10px 15px 
+		h3
+			font-size: em(16px)
+		p
+			font-size: em(14px)
+	.services
+		.item
+			padding: 5px 
+			margin: 0px
+			min-height: 350px
+			.fa
+				font-size: em(30px)
+				margin: 20px 0px 10px 
+			h3
+				font-size: em(14px)
+			p
+				font-size: em(13px)
+			.button
+				right: 0
+				left: 0
+				bottom: 0
+				border-top-left-radius: 0px
+				border-top-right-radius: 0px
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+	.mnu-line
+		text-align: center
+		.logo
+			display: inline-block
+		.phone-wrap
+			text-align: center
+			padding-right: 0px
+		
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+	.phone-wrap
+		margin-top: 20px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

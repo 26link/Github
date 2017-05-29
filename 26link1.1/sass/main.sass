@@ -1,0 +1,438 @@
+@import bourbon
+@import vars.sass
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+//services
+.services
+	padding-top: 20px
+	padding-bottom: 40px
+	text-align: center
+	.item
+		position: relative
+		top: 0
+		right: 0
+		margin: 0px 20px
+		background-color: #fbfdff
+		border-radius: 7px
+		border: 1px solid lighten($main-color, 65%)
+		padding: 10px 20px
+		min-height: 500px
+		+mt(.5s)
+		.fa
+			font-size: em(50px)
+			margin: 30px 0 10px
+		h3
+			font-size: em(18px)
+		p
+			text-align: left
+			font-size: em(14px)
+			margin-bottom: 20px
+		
+		.item-price-old
+			font-family: "RobotoCondensedBold", sans-serif
+			color: red
+			text-decoration: line-through
+			font-size: em(18px)
+			span
+				color: $bg-color
+				
+			
+		.item-price-new
+			font-family: "RobotoCondensedBold", sans-serif
+			text-align: center !important
+			font-size: em(30px)
+			color: $accent-color
+		.item-price
+			font-family: "RobotoCondensedBold", sans-serif
+			font-size: em(26px)
+
+
+		.button
+			position: absolute
+			padding: 10px 30px
+			font-weight: 600
+			right: 0
+			left: 0
+			bottom: 0
+			border-top-left-radius: 0px
+			border-top-right-radius: 0px
+		&:hover
+			background-color: $bg-color
+			color: #fff
+			transform: scale(1.02)
+			span
+				span
+					color: #fff
+			
+			
+
+
+//AsWork
+.aswork
+	background-image: url(/img/aswork.jpg) 
+	min-height: 100vh
+	background-size: cover
+	background-position: top center
+	text-align: center
+	.payment
+		margin: 20px 0px 30px 
+
+.aswork-item
+	padding-top: 50px
+	background-color: rgba(251, 253, 255, 0.7)
+	padding: 10px
+	margin: 30px 0
+	border-radius: 5px
+	.icon-wrap
+		width: 70px
+		height: 70px
+		line-height: 70px
+		text-align: center
+		background-color: $accent-color
+		display: inline-block
+		border-radius: 5px
+		font-size: em(38px)
+		color: #fff
+		margin-top: 10px
+		margin-right: 20px
+
+.aswork-text, 
+.aswork-icon
+	display: table-cell
+	vertical-align: top
+.aswork-text
+	text-align: left
+	h3
+		margin-top: 3px
+		margin-bottom: 0px
+		letter-spacing: 1px
+	p
+		margin-top: 5px
+
+
+//review
+
+.reviews
+	background-color: #fbfcfd
+	text-align: center
+	
+.review
+	margin: 20px 0px 40px
+	.round
+		border-radius: 100px
+		width: 120px
+		height: 120px
+.review-text
+	text-align: left
+	padding-left: 20px
+	.name
+		font-family: "RobotoCondensedBold", sans-serif
+		margin: 0px
+		font-size: em(18px)
+	.wherefrom
+		font-family: "RobotoCondensedRegular", sans-serif
+		font-style: italic
+		margin: 5px 0 0 10px
+		font-size: em(14px)
+		text-align: right
+	.fulltext
+		color: lighten($main-color, 20%)
+		font-style: italic
+		margin: 25px 0 0 10px
+
+.review-img,
+.review-text
+	display: table-cell
+	vertical-align: top
+	.slide
+		display: inline-block
+
+
+//works
+.works
+	text-align: center
+	background-image: url(/img/works.jpg) 
+	background-size: cover
+	background-position: top center
+	padding: 30px 0px 80px
+	.owl-dots
+		position: absolute
+		bottom: -40px
+		margin-top: 50px
+		width: 100%
+		text-align: center
+		.owl-dot
+			display: inline-block
+			width: 16px
+			height: 16px
+			background-color: rgba(255,255,255,0.8)
+			border-radius: 10em
+			margin: 0px 2px
+			cursor: pointer
+			&.active
+				background-color: $accent-color
+			&:hover
+				box-shadow: 0px 0px 2px 1px rgba(0,0,0,0.25)
+	.slider-nav-container
+		position: relative
+	.slider-nav
+		font-size: 40px
+		color: $main-color
+		position: absolute
+		width: 100%
+		z-index: 2
+		div
+			bottom: 38px
+			width: 50px
+			height: 50px
+			border-radius: 10em
+			cursor: pointer
+			background-color: lighten($bg-color, 30%)
+			text-align: center
+			opacity: .4
+			color: #fff
+			position: absolute
+			top: 220px
+			+mt(.2s)
+			&:hover
+				background-color: $accent-color
+				opacity: 1
+			&:last-child
+				right: 0
+			.fa
+				font-size: 32px
+				margin-top: 8px
+				position: absolute
+				top: 1px
+				right: 16px
+	
+	p
+		text-align: center
+		margin: 0 0 40px
+	
+
+.box
+	text-align: center
+	width: 431px
+	margin: 20px auto
+	perspective: 1200
+	transform-style: preserve-3d
+
+.flipper
+	position: relative
+	width: 431px
+	height: 500px
+	transform-style: preserve-3d
+	transition: .7s linear
+
+.front, .back
+	box-sizing: border-box
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	backface-visibility: hidden
+
+.front
+	z-index: 2
+	transform: rotateY(0deg)
+	background: white
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1)
+	border-bottom: 1px solid #f5f5f5
+
+
+.back
+	transform: rotateY(-180deg)
+	background-color: lighten($bg-color, 80%)
+	color: lighten($bg-color, 10%)
+	padding: 40px 10px 20px
+	h5
+		position: relative
+		font-size: em(14px)
+		letter-spacing: 1px
+		&:after
+			content: ""
+			width: 50px
+			height: 1px
+			position: absolute
+			bottom: -10px
+			left: 50%
+			background: $accent-color
+			margin-left: -25px
+	li
+		text-align: left
+		list-style: none
+		&:before
+			content: "\f00c"
+			font-family: FontAwesome
+			color: lighten($bg-color, 30%)
+			margin-right: 10px
+	p
+		padding-top: 15px
+	a
+		display: block
+		width: 170px
+		margin: 0 auto
+		padding: 0px 3px
+		border: 1px solid lighten($bg-color, 30%)
+		color: lighten($bg-color, 30%)
+		border-radius: 4px
+		+mt(.3s)
+		.fa
+			color: lighten($bg-color, 30%)
+			margin-right: 10px
+			+mt(.3s)
+		&:hover
+			text-decoration: none
+			background-color: lighten($bg-color, 30%)
+			color: #fff
+			.fa
+				color: #fff
+
+.box:hover .flipper
+	transform: rotateY(180deg)
+
+//footer
+footer
+	background-color: $bg-color
+	p
+		color: lighten($bg-color, 50%)
+		text-align: right
+		font-size: em(12px)
+	
+
+.zayvka-form
+	margin: 50px 70px
+	padding: 15px 30px
+	border-radius: 5px
+	background-color: $bg-color
+	&-head
+		text-align: center
+		h3
+			color: #fff
+			line-height: 0
+			font-size: em(20px)
+		p
+			color: lighten($bg-color, 50%)
+			font-size: em(14px)
+form
+	label
+		.podpis
+			font-size: em(14px)
+			color: lighten($bg-color, 50%)
+
+		input
+			border: none
+			font-size: em(14px)
+			border-radius: 5px
+			display: block
+			width: 100%
+			padding: 5px 15px
+			margin-bottom: 15px
+			background-color: lighten($bg-color, 50%)
+			+mt(.4s)
+			&:focus
+				background-color: lighten($bg-color, 70%)
+	button
+		border: none
+		padding: 3px 40px
+		margin:
+			top: 20px
+			bottom: 20px
+		span
+			font-size: em(14px)
+
+.pop-form
+	position: relative
+
+#callback
+	background: $bg-color
+	padding: 20px 30px
+	text-align: left
+	max-width: 400px
+	margin: 40px auto
+	position: relative
+	h3
+		text-align: center
+		margin-top: 50px
+		color: lighten($main-color, 60%)
+	span
+		color: lighten($main-color, 40%)
+		padding: 20px 5px 10px
+	.success
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		text-align: center
+		color: #fff
+		text-transform: uppercase
+		background-color: #4D233B
+		z-index: 2
+		padding: 30px
+		display: none
+		&.visible
+			display: inline-block
+			padding-top: 30%
+	.mfp-close
+		color: #fff
+
+.top
+	position: fixed
+	bottom: 38px
+	right: 20px
+	width: 50px
+	height: 50px
+	border-radius: 10em
+	cursor: pointer
+	background-color: lighten($bg-color, 30%)
+	text-align: center
+	opacity: .4
+	color: #fff
+	display: none
+	+mt(.2s)
+	.fa
+		font-size: 32px
+		margin-top: 8px
+	&:hover
+		color: #fff
+		opacity: 1
+		background-color: $accent-color
+	&.active
+		right: 10px
+
+
+//ALWAYS END
+@import media
+
+//Load Libs SASS
+@import app/libs/animate/animate.sass
+@import app/libs/fontawesome/font-awesome.sass
+@import app/libs/flipclock/flipclock.sass
+@import app/libs/owl.carousel/dist/assets/owl_style.sass
+@import app/libs/magnific-popup/dist/magnific-popup
+
